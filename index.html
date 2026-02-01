@@ -178,6 +178,12 @@
             background-size: cover;
             background-position: center;
         }
+        .card-bg video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
         /* Card 1 — warm dark tones */
         .card-1 .card-bg {
             background:
@@ -520,7 +526,11 @@
     <!-- ── Location Cards ── -->
     <div class="cards-wrap">
         <div class="location-card card-1 fadeInUp" style="animation-delay: 0.4s">
-            <div class="card-bg"></div>
+            <div class="card-bg">
+                <video autoplay muted loop playsinline>
+                    <source src="studio8Video.mp4" type="video/mp4">
+                </video>
+            </div>
             <div class="card-overlay">
                 <div class="card-name">Studio 8 Corona</div>
                 <div class="card-btns">
