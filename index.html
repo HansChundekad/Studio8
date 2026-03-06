@@ -13,7 +13,7 @@
             theme: {
                 extend: {
                     colors: {
-                        gold:      { DEFAULT: '#d4af37', light: '#f2dda0', dark: '#96741f' },
+                        gold:      { DEFAULT: '#f5c518', light: '#ffe566', dark: '#c49a00' },
                         surface:   '#0d0d0d',
                     },
                     fontFamily: {
@@ -31,7 +31,7 @@
             from { opacity: 0; transform: translateY(40px); }
             to   { opacity: 1; transform: translateY(0); }
         }
-        .fadeInUp { opacity: 0; animation: fadeInUp 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both; }
+        .fadeInUp { opacity: 0; animation: fadeInUp 0.9s cubic-bezier(0.215, 0.61, 0.355, 1) both; }
         .menu-panel {
             transform: translateX(-50%) translateY(-100%);
             transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -42,18 +42,13 @@
                         radial-gradient(ellipse at 30% 60%, rgba(50,40,35,.5) 0%, transparent 55%),
                         linear-gradient(175deg, #2c2218 0%, #1a140f 40%, #0e0b09 75%, #000 100%);
         }
-        .card-bg-cool {
-            background: radial-gradient(ellipse at 50% 25%, rgba(45,55,70,.6) 0%, transparent 60%),
-                        radial-gradient(ellipse at 25% 65%, rgba(40,45,55,.5) 0%, transparent 55%),
-                        linear-gradient(175deg, #1c2028 0%, #141618 40%, #0c0d0f 75%, #000 100%);
-        }
     </style>
 </head>
 <body class="font-sans bg-black text-white min-h-screen max-w-md mx-auto relative overflow-x-hidden pt-[46px]">
 
     <!-- Promo Banner -->
     <div class="fixed top-0 left-0 w-full h-[46px] z-20 flex items-center justify-center"
-         style="background: linear-gradient(180deg, #f2dda0 0%, #d4af37 18%, #c9a42c 45%, #b08828 75%, #96741f 100%); box-shadow: 0 2px 14px rgba(212,175,55,.45)">
+         style="background: linear-gradient(180deg, #ffe566 0%, #f5c518 25%, #e6b800 60%, #c49a00 100%); box-shadow: 0 2px 18px rgba(245,197,24,.55)">
         <span class="text-[13px] font-semibold tracking-wide text-center leading-none text-neutral-900">
             Launch Special &ndash; <strong class="font-bold">20% Off</strong> Your First Cut
         </span>
@@ -108,109 +103,127 @@
     <!-- Hero -->
     <section class="px-5 pt-8 pb-2.5">
         <p class="text-xs font-bold text-gold tracking-[2.5px] uppercase mb-3.5 fadeInUp" style="animation-delay:.1s">Welcome to Studio 8</p>
-        <h1 class="font-serif text-[30px] font-bold leading-tight text-white mb-7 fadeInUp" style="animation-delay:.2s">A Modern Take on a<br>Time Honored Tradition</h1>
-        <p class="text-xs font-bold text-gold tracking-[2.5px] uppercase mb-[18px] fadeInUp" style="animation-delay:.3s">Choose Location</p>
+        <h1 class="font-serif text-[30px] font-bold leading-tight text-white mb-4 fadeInUp" style="animation-delay:.2s">A Modern Take on a<br>Time Honored Tradition</h1>
+        <div class="mb-7 fadeInUp" style="animation-delay:.25s; height:1px; background:linear-gradient(90deg, #f5c518 0%, #ffe566 40%, transparent 100%); box-shadow:0 0 8px rgba(245,197,24,.4)"></div>
+        <p class="text-xs font-bold text-gold tracking-[2.5px] uppercase mb-[18px] fadeInUp" style="animation-delay:.3s">Check Us Out</p>
     </section>
 
     <!-- Location Cards -->
     <div class="px-5 flex flex-col gap-[18px]">
 
         <!-- Card 1: Corona -->
-        <div class="rounded-xl overflow-hidden relative h-80 ring-1 ring-white/10 transition-transform duration-300 hover:-translate-y-0.5 fadeInUp" style="animation-delay:.4s">
-            <div class="absolute inset-0 bg-cover bg-center card-bg-warm">
-                <video autoplay muted loop playsinline preload="metadata" class="w-full h-full object-cover block" style="will-change:transform">
-                    <source src="studio8Video.mp4" type="video/mp4">
+        <div class="rounded-xl overflow-hidden relative ring-1 ring-white/10 transition-transform duration-300 hover:-translate-y-0.5 fadeInUp" style="animation-delay:.4s; aspect-ratio:9/16;">
+            <div class="absolute inset-0 card-bg-warm">
+                <video autoplay muted loop playsinline preload="metadata"
+                       class="absolute inset-0 w-full h-full object-cover block"
+                       style="will-change:transform; transform:scale(1.08); transform-origin:center center;">
+                    <source src="studio8clips.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="absolute inset-0 flex flex-col justify-end p-6"
                  style="background: linear-gradient(to top, rgba(0,0,0,.92) 0%, rgba(0,0,0,.35) 45%, transparent 100%)">
-                <div class="font-serif text-[25px] font-bold text-gold uppercase tracking-wide mb-4">Studio 8 Corona</div>
+                <div class="font-serif text-[25px] font-bold uppercase tracking-wide mb-4" style="color: #ffd63d;">Studio 8 Corona</div>
                 <div class="flex gap-3">
                     <button class="bg-white text-black px-7 py-3 rounded-lg text-sm font-bold cursor-pointer font-sans border-none transition-all duration-200 hover:bg-gold hover:text-black active:scale-[0.97]">Learn More</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Card 2: Westside -->
-        <div class="rounded-xl overflow-hidden relative h-80 ring-1 ring-white/10 transition-transform duration-300 hover:-translate-y-0.5 fadeInUp" style="animation-delay:.5s">
-            <div class="absolute inset-0 bg-cover bg-center card-bg-cool"></div>
-            <div class="absolute inset-0 flex flex-col justify-end p-6"
-                 style="background: linear-gradient(to top, rgba(0,0,0,.92) 0%, rgba(0,0,0,.35) 45%, transparent 100%)">
-                <div class="font-serif text-[25px] font-bold text-gold uppercase tracking-wide mb-4">Studio 8 Westside</div>
-                <div class="flex gap-3">
-                    <button class="bg-white text-black px-7 py-3 rounded-lg text-sm font-bold cursor-pointer font-sans border-none transition-all duration-200 hover:bg-gold hover:text-black active:scale-[0.97]">Learn More</button>
-                    <button class="bg-black/65 text-white border border-white/25 px-5 py-3 rounded-lg text-xs font-semibold tracking-[1.5px] uppercase cursor-pointer font-sans transition-all duration-200 hover:bg-white/10 hover:border-white/40 active:scale-[0.97]">Book Now</button>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Email Signup -->
-    <section class="bg-surface mt-10 px-5 pt-10">
+    <section class="bg-surface mt-10 px-5 pt-10 fadeInUp" style="animation-delay:.6s">
         <h2 class="font-serif text-[28px] font-bold leading-tight mb-4">Get 10% off Your<br>Next Visit!</h2>
         <p class="text-white/50 text-sm leading-relaxed mb-7">Stay connected with the Studio 8 family and receive weekly tips, alerts on new services, and other exciting offers that will keep you looking fresh until your next visit.</p>
         <input type="email" placeholder="Enter Your Email"
                class="w-full bg-white/[0.04] border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-white/30 outline-none mb-4 font-sans transition-all duration-200 focus:ring-2 focus:ring-gold/40 focus:border-gold/40">
         <button class="w-full bg-gold text-black py-3.5 rounded-lg text-[15px] font-bold cursor-pointer font-sans tracking-wide border-none transition-all duration-200 hover:bg-gold-light active:scale-[0.98]">Sign Up &rarr;</button>
-        <div class="h-px bg-white/10 my-8"></div>
+        <div class="my-8" style="height:1px; background:linear-gradient(90deg, transparent 0%, #f5c518 25%, #ffe566 50%, #f5c518 75%, transparent 100%); box-shadow:0 0 6px rgba(245,197,24,.3)"></div>
     </section>
 
-    <!-- Footer Links -->
-    <div class="bg-surface px-5">
-        <div class="mb-8">
-            <h3 class="text-[15px] font-bold text-white mb-3.5">Support</h3>
+    <!-- Footer Links + Address on white background -->
+    <div class="bg-white px-5 pt-8 pb-6">
+
+        <!-- Support card -->
+        <div class="bg-zinc-100/80 border border-zinc-200 rounded-xl px-5 py-5 mb-4">
+            <h3 class="text-[14px] font-bold text-zinc-800 uppercase tracking-widest mb-3">Support</h3>
             <ul class="list-none space-y-2.5">
-                <li><a href="#" class="text-white/50 text-sm no-underline hover:text-gold transition-colors duration-200">FAQ</a></li>
-                <li><a href="#" class="text-white/50 text-sm no-underline hover:text-gold transition-colors duration-200">Privacy Policy</a></li>
-                <li><a href="#" class="text-white/50 text-sm no-underline hover:text-gold transition-colors duration-200">Terms of Service</a></li>
-                <li><a href="#" class="text-white/50 text-sm no-underline hover:text-gold transition-colors duration-200">Return Policy</a></li>
+                <li><a href="#" class="text-zinc-500 text-sm no-underline hover:text-zinc-900 transition-colors duration-200">FAQ</a></li>
+                <li><a href="#" class="text-zinc-500 text-sm no-underline hover:text-zinc-900 transition-colors duration-200">Privacy Policy</a></li>
+                <li><a href="#" class="text-zinc-500 text-sm no-underline hover:text-zinc-900 transition-colors duration-200">Terms of Service</a></li>
+                <li><a href="#" class="text-zinc-500 text-sm no-underline hover:text-zinc-900 transition-colors duration-200">Refund Policy</a></li>
             </ul>
         </div>
-        <div class="mb-8">
-            <h3 class="text-[15px] font-bold text-white mb-3.5">Useful Links</h3>
+
+        <!-- Useful Links card -->
+        <div class="bg-zinc-100/80 border border-zinc-200 rounded-xl px-5 py-5 mb-4">
+            <h3 class="text-[14px] font-bold text-zinc-800 uppercase tracking-widest mb-3">Useful Links</h3>
             <ul class="list-none space-y-2.5">
-                <li><a href="#" class="text-white/50 text-sm no-underline hover:text-gold transition-colors duration-200">Shop</a></li>
-                <li><a href="#" class="text-white/50 text-sm no-underline hover:text-gold transition-colors duration-200">Our Barbers</a></li>
-                <li><a href="#" class="text-white/50 text-sm no-underline hover:text-gold transition-colors duration-200">Book Appointment</a></li>
-                <li><a href="#" class="text-white/50 text-sm no-underline hover:text-gold transition-colors duration-200">Our Story</a></li>
-                <li><a href="#" class="text-white/50 text-sm no-underline hover:text-gold transition-colors duration-200">Lookbook</a></li>
+                <li><a href="#" class="text-zinc-500 text-sm no-underline hover:text-zinc-900 transition-colors duration-200">Shop</a></li>
+                <li><a href="#" class="text-zinc-500 text-sm no-underline hover:text-zinc-900 transition-colors duration-200">Our Barbers</a></li>
+                <li><a href="#" class="text-zinc-500 text-sm no-underline hover:text-zinc-900 transition-colors duration-200">Book Appointment</a></li>
+                <li><a href="#" class="text-zinc-500 text-sm no-underline hover:text-zinc-900 transition-colors duration-200">Our Story</a></li>
+                <li><a href="#" class="text-zinc-500 text-sm no-underline hover:text-zinc-900 transition-colors duration-200">Lookbook</a></li>
             </ul>
         </div>
-    </div>
 
-    <!-- Footer Address -->
-    <div class="bg-surface px-5 pb-8 flex gap-[18px] items-start">
-        <div class="shrink-0"><img src="logo.png" alt="Studio 8" class="h-14 w-auto block"></div>
-        <div class="text-[13px] text-white/50 leading-relaxed">
-            <div class="text-white font-semibold text-[13px]">Location:</div>
-            601 W 6th St<br>Corona, CA 92882
+        <!-- Location card -->
+        <div class="bg-zinc-100/80 border border-zinc-200 rounded-xl px-5 py-5 mb-6 flex gap-4 items-center">
+            <div class="shrink-0"><img src="logo.png" alt="Studio 8" class="h-12 w-auto block"></div>
+            <div class="text-[13px] text-zinc-500 leading-relaxed">
+                <div class="text-zinc-800 font-semibold text-[13px] mb-0.5">Location</div>
+                601 W 6th St<br>Corona, CA 92882
+            </div>
         </div>
-    </div>
 
-    <!-- Footer Bottom -->
-    <div class="bg-surface px-5 pb-16">
-        <div class="flex gap-3.5 mb-3.5">
-            <a href="https://www.instagram.com/studio8corona/" target="_blank" rel="noopener" class="text-white flex items-center hover:text-gold transition-colors duration-200">
+        <!-- Social + copyright -->
+        <div class="flex gap-3.5 mb-3">
+            <a href="https://www.instagram.com/studio8corona/" target="_blank" rel="noopener" class="text-zinc-400 flex items-center hover:text-zinc-800 transition-colors duration-200">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
                 </svg>
             </a>
-            <a href="#" class="text-white flex items-center hover:text-gold transition-colors duration-200">
+            <a href="#" class="text-zinc-400 flex items-center hover:text-zinc-800 transition-colors duration-200">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
                 </svg>
             </a>
         </div>
-        <div class="text-xs text-white/30 leading-relaxed">
-            &copy; Studio 8 2024<br>
-            Designed &amp; Developed by <a href="#" class="text-gold no-underline hover:text-gold-light transition-colors duration-200">Hans Chundekad</a>.
+        <div class="text-xs text-zinc-400 leading-relaxed pb-16">
+            &copy; Studio 8 2026<br>
+            Designed &amp; Developed by <a href="#" class="text-zinc-700 no-underline hover:text-black transition-colors duration-200">Hans Chundekad</a>.
         </div>
+
     </div>
 
     <!-- Floating Book Now -->
-    <button class="fixed bottom-7 right-5 bg-[#111] text-white border border-white/15 px-7 py-3.5 rounded-lg text-[13px] font-semibold tracking-[2px] uppercase cursor-pointer font-sans z-50 shadow-2xl transition-all duration-200 hover:bg-gold hover:text-black hover:border-gold active:scale-[0.97]">Book Now</button>
-
+    <a 
+  href="https://studio8booking.my.canva.site"
+  class="fixed bottom-7 right-5 bg-[#111] text-white border border-white/15 px-7 py-3.5 rounded-lg text-[13px] font-semibold tracking-[2px] uppercase cursor-pointer font-sans z-50 shadow-2xl transition-all duration-200 hover:bg-gold hover:text-black hover:border-gold active:scale-[0.97]"
+>
+  Book Now
+</a>
     <script>
+        // Ensure video always plays — retry on pause/visibility change
+        document.querySelectorAll('video').forEach(v => {
+            const ensurePlaying = () => { if (v.paused) v.play().catch(() => {}); };
+
+            v.play().catch(() => {});
+
+            // Restart if it somehow pauses
+            v.addEventListener('pause', () => { setTimeout(ensurePlaying, 200); });
+
+            // Resume when tab becomes visible again
+            document.addEventListener('visibilitychange', () => {
+                if (!document.hidden) ensurePlaying();
+            });
+
+            // Resume when page regains focus (e.g. switching apps on phone)
+            window.addEventListener('focus', ensurePlaying);
+
+            // Keep checking every 2s as a fallback
+            setInterval(ensurePlaying, 2000);
+        });
+
         const menu = document.getElementById('mobileMenu');
         const backdrop = document.getElementById('menuBackdrop');
         const menuAnimatedEls = menu.querySelectorAll('.fadeInUp');
